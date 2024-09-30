@@ -1,39 +1,57 @@
 @use 'var' as *;
 
-.head-bar {
+.head {
+	font-size: 30px;
 	display: flex;
-	height: 50px;
-	background-color: $color_3;
-	padding-left: 10%;
-	padding-right: 10%;
+	height: 60px;
 	justify-content: space-between;
-	&>div>img {
-		padding-right: 5px;
+	margin-left: 10%;
+	margin-right: 10%;	
 	}
-	.head-main {
-		&>img {
-			padding-right: 10px;
-		}
+.nav-btn {
+	display: none;
+	border: none;	
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+.head1{
+	display: flex;
+	width: 20%;
+}
+.head2 {
+	display: flex;
+	cursor: pointer;
+	width: 40%;
+	&>button {
+		font-size: 20px;
+		border: none;
+		margin-right: 3px;
+		padding: 4px;
 	}
-	.head-btn {
-		&>button {
-			cursor: pointer;
-			background-color: none;
-			border: none;
-			background-color: transparent;
-			&:hover {
-				background-color: $color_1;
-			}
-		}
+	&>button:hover {
+		background-color: $color_3;
 	}
 }
 
-
 @media(max-width:$breakpoint) {
-	body{
-		.head-bar {
+	body {
+		.head2 {
 			display: none;
 		}
+		.nav-btn {
+			display: flex;
+			justify-content: right;
+		}
+		.nav-btn:hover {
+			.head2 {
+				display: block;
+				position: absolute;
+				color: $color_2;
+				background-color: black;
+				
+			}
+		}
 	}
-	
 }

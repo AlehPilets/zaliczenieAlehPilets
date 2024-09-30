@@ -1,34 +1,25 @@
 @use 'var' as *;
 
-.nav-bar {
-	display: flex;
-	&>div>p {
-		font-size: 25px;
-		font-style: inherit;
-	}
-	li {
-		&:hover {
-			background-color: $color_1;
-		}
-		list-style: none;
-	}
-	&>div>button {
-		color: $color_2;
-		background-color: forestgreen;
-		border: 0px;
-		padding: 5px;
-		border-radius: 15px;
+.nav {
+	background-color: black;
+	text-align: center;	
+	&>button {
+		margin-right: 10px;
+		color: white;
+		border: none;
+		background-color: transparent;
 		cursor: pointer;
+	}
+	&>button:hover {
+		color: yellow;
 	}
 }
 
-
 @media(max-width:$breakpoint) {
 	body {
-		.nav-bar {
+		.nav {
 			display: none;
 		}
-
 	}
 
 }
