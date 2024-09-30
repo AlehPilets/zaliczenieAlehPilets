@@ -1,0 +1,111 @@
+@use 'var' as *;
+.main {
+	display: flex;
+	justify-content: left;
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Indie Flower", cursive;
+	font-weight: 400;
+	font-style: normal;
+	color: $color_2;
+	font-size: 20px;
+	color: black;
+	a {
+		text-decoration: none;
+	}
+}
+.main-bar {
+	width: 60%;
+	text-align: center;
+}
+.nav-bar {
+	margin-left: 10%;
+}
+.main-bar {
+	margin-right: 10%;
+}
+body{
+	background-color: rgb(184, 209, 232);
+}
+.header{
+	display: flex;
+	background-color: $color_2;
+	justify-content: space-between;
+	padding: 6px;
+}
+button {
+	background: rgb(163, 168, 199);
+	border: 1px;
+
+}
+.btn-blue>button {
+	background: #190dfc;
+	color: #fff;
+	border: 0px;
+	width: 300px;
+}
+h1 {
+	font-size: 30px;
+}
+.header-twice {
+	display: flex;
+	justify-content: space-between;
+	padding-top:5px;
+}
+.header-right>div>a {
+	display: block;
+}
+.bd {
+	background-color: $color_2;
+	border: 1px;
+	margin-top: 10px;
+}
+.header-right>div>input {
+	margin-top: 10px;
+	width: 100%;
+}
+.header-right,
+.header-left {
+	text-align: left;
+}
+.header-left>div>a {
+	color: $color_3;
+}
+#elite {
+	display: flex;
+	&>img {
+		margin-right: 5px;
+	}
+}
+.header-left {
+	width: 60%;
+	margin-right: 5px;
+}
+.header-right {
+	width: 40%;
+	margin-left: 5px;
+}
+
+
+
+
+
+
+
+@media(max-width:$breakpoint) {
+	body {
+		.main {
+			display: block;
+			flex-direction: column;
+		}
+		.main-bar,
+		.header-twice,{
+			display: block;
+			// flex-direction: column;
+		}
+		
+	}
+
+}
